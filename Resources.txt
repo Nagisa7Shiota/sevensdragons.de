@@ -1,16 +1,16 @@
-Frontend:
-- TypeScript
-- Vue.js
-- (Optional) Vuex
-- Tailwindcss
+- Frontend:
+	- TypeScript → Zum Schreiben von programmierbares Frontend.
+	- Vue.js → Fraemwork zum Erstellen von Dynamische Userinterfaces.
+	- (Optional) Pinia → Statemanagement für Vue,js.
+	- Tailwindcss → Besseres CSS Design mit TypeScript.
 
-Backend:
-- Express.js
-- TypeScript
+- Backend:
+	- Express.js → Verwalten von Anfragen als API.
+	- TypeScript → Programmiersprache des Backends.
 
 Dev Tools:
-- ESLint
-- Prettier
+	- ESLint → Aushilfen für besseren Code.
+	- Prettier → Code besser formatieren.
 
 Installation:
 To install the specified tools and libraries for both the frontend and backend of your web development project, follow the steps below. Make sure you have Node.js and npm (Node Package Manager) installed on your machine.
