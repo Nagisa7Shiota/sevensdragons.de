@@ -1,0 +1,181 @@
+- Frontend:
+	- TypeScript → Zum Schreiben von programmierbares Frontend.
+	- Vue.js → Fraemwork zum Erstellen von Dynamische Userinterfaces.
+	- (Optional) Pinia → Statemanagement für Vue,js.
+	- Tailwindcss → Besseres CSS Design mit TypeScript.
+
+- Backend:
+	- Express.js → Verwalten von Anfragen als API.
+	- TypeScript → Programmiersprache des Backends.
+
+Dev Tools:
+	- ESLint → Aushilfen für besseren Code.
+	- Prettier → Code besser formatieren.
+
+Installation:
+To install the specified tools and libraries for both the frontend and backend of your web development project, follow the steps below. Make sure you have Node.js and npm (Node Package Manager) installed on your machine.
+
+### Frontend Setup
+
+1. **Create a New Vue.js Project:**
+   You can use Vue CLI to create a new Vue.js project with TypeScript support. If you don't have Vue CLI installed, you can install it globally:
+
+   ```bash
+   npm install -g @vue/cli
+   ```
+
+   Now, create a new Vue project:
+
+   ```bash
+   vue create my-vue-app
+   ```
+
+   During the setup, select the option to include TypeScript.
+
+2. **Navigate to Your Project Directory:**
+
+   ```bash
+   cd my-vue-app
+   ```
+
+3. **Install Vuex (Optional):**
+   If you want to use Vuex for state management, you can install it as follows:
+
+   ```bash
+   npm install vuex@next
+   ```
+
+4. **Install Tailwind CSS:**
+   You can install Tailwind CSS by following these steps:
+
+   - Install Tailwind CSS and its dependencies:
+
+     ```bash
+     npm install -D tailwindcss postcss autoprefixer
+     ```
+
+   - Create the configuration files:
+
+     ```bash
+     npx tailwindcss init -p
+     ```
+
+   - Configure your `tailwind.config.js` file to include your template paths:
+
+     ```javascript
+     module.exports = {
+       content: [
+         "./src/**/*.{vue,js,ts,jsx,tsx}",
+       ],
+       theme: {
+         extend: {},
+       },
+       plugins: [],
+     }
+     ```
+
+   - Add the Tailwind directives to your CSS file (e.g., `src/assets/tailwind.css`):
+
+     ```css
+     @tailwind base;
+     @tailwind components;
+     @tailwind utilities;
+     ```
+
+   - Import the Tailwind CSS file in your main entry file (e.g., `src/main.ts`):
+
+     ```javascript
+     import './assets/tailwind.css';
+     ```
+
+### Backend Setup
+
+1. **Create a New Directory for Your Backend:**
+
+   ```bash
+   mkdir my-backend
+   cd my-backend
+   ```
+
+2. **Initialize a New Node.js Project:**
+
+   ```bash
+   npm init -y
+   ```
+
+3. **Install Express.js and TypeScript:**
+
+   ```bash
+   npm install express
+   npm install -D typescript @types/node @types/express ts-node
+   ```
+
+4. **Create a `tsconfig.json` File:**
+   You can create a `tsconfig.json` file to configure TypeScript. Here’s a basic example:
+
+   ```json
+   {
+     "compilerOptions": {
+       "target": "ES6",
+       "module": "commonjs",
+       "rootDir": "./src",
+       "outDir": "./dist",
+       "strict": true,
+       "esModuleInterop": true,
+       "skipLibCheck": true
+     },
+     "include": ["src/**/*"],
+     "exclude": ["node_modules"]
+   }
+   ```
+
+### Development Tools
+
+1. **Install ESLint:**
+
+   ```bash
+   npm install -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+   ```
+
+   - Initialize ESLint:
+
+     ```bash
+     npx eslint --init
+     ```
+
+   Follow the prompts to configure ESLint for TypeScript.
+
+2. **Install Prettier:**
+
+   ```bash
+   npm install -D prettier eslint-config-prettier eslint-plugin-prettier
+   ```
+
+   - Create a `.prettierrc` file to configure Prettier (optional):
+
+     ```json
+     {
+       "singleQuote": true,
+       "semi": false
+     }
+     ```
+
+   - Update your ESLint configuration to include Prettier:
+
+     In your `.eslintrc.js` or `.eslintrc.json`, add:
+
+     ```json
+     {
+       "extends": [
+         "plugin:@typescript-eslint/recommended",
+         "prettier"
+       ],
+       "plugins": ["prettier"],
+       "rules": {
+         "prettier/prettier": "error"
+       }
+     }
+     ```
+
+### Summary
+You now have the necessary tools and libraries installed for both the frontend (Vue.js, TypeScript, Vuex, Tailwind CSS) and the backend (Express.js, TypeScript) along with development tools (ESLint, Prettier). You can start building your application by creating components, routes, and implementing your desired features!
