@@ -1,15 +1,13 @@
 <script setup lang="ts">
-  import { RouterLink } from 'vue-router';
   import '../../assets/comnav.css';
+  import { ref } from 'vue';
+  const activeName = ref('first');
 </script>
 
 <template>
-
-  <nav>
-      <RouterLink class="nav-component" to="/">Home</RouterLink>
-      <RouterLink class="nav-component" to="/about">About</RouterLink>
-      <RouterLink class="nav-component" to="/legal">Legal</RouterLink>
-  </nav>
-
+  <el-tabs v-model="activeName" class="demo-tabs">
+    <el-tab-pane label="Home" name="first" to="/"></el-tab-pane>
+    <el-tab-pane label="About" name="second" to="/about"></el-tab-pane>
+    <el-tab-pane label="Legal" name="third" to="/legal"></el-tab-pane>
+  </el-tabs>
 </template>
-
