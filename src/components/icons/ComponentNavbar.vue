@@ -6,9 +6,9 @@
 <template>
 
   <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/legal">Legal</RouterLink>
+      <RouterLink class="nav-component" to="/">Home</RouterLink>
+      <RouterLink class="nav-component" to="/about">About</RouterLink>
+      <RouterLink class="nav-component" to="/legal">Legal</RouterLink>
   </nav>
 
 </template>
