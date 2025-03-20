@@ -1,17 +1,40 @@
+/* Navbar styles */
 nav {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    margin-right: 100%;
-    justify-content: space-evenly;
-    background-color: hsla(0, 2%, 44%, 0.2);
-    position: sticky;
+    background-color: #f5f5f5; /* Light background for the navbar */
+    border: 1px solid #dcdfe6; /* Border around the navbar */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Flexbox layout */
+    justify-content: space-evenly; /* Space items evenly */
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Stick to the top */
 }
 
+/* Nav component styles */
 .nav-component {
-    font-size: 150%;
-    padding: 1% 5%;
-    border-radius: 25%;
-    display: inline-block;
-    border: 0.20vw solid rgb(141, 137, 137);
+    padding: 20px; /* Add padding */
+    background-color: #f9f9f9; /* Change background color */
+    border: 1px solid #e0e0e0; /* Add border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 150%; /* Increase font size */
+    display: inline-block; /* Inline block for layout */
+    margin: 0 10px; /* Margin between nav items */
+}
+
+/* Active nav item styles */
+.nav-component.is-active {
+    background-color: #ffffff; /* White background for active item */
+    border-color: #409eff; /* Change border color for active item */
+    font-weight: bold; /* Bold text for active item */
+}
+
+/* Hover effect for nav items */
+.nav-component:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+/* Optional: Style for inactive nav items */
+.nav-component:not(.is-active) {
+    color: #606266; /* Inactive item text color */
 }
