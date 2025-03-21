@@ -9,7 +9,7 @@
 a,
 .red {
   text-decoration: none;
-  color: rgb(230, 0, 0);
+  color: #f36868;
   transition: 0.4s;
   padding: 3px;
 }
