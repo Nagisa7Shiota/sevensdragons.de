@@ -10,6 +10,11 @@ nav {
     top: 0;
 }
 
+.nav-header{
+    position: sticky; 
+    top: 0;
+}
+
 
 .nav-component {
     padding: 20px;
