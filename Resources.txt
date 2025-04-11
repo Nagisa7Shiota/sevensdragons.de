@@ -2,7 +2,7 @@
 	- TypeScript → Zum Schreiben von programmierbares Frontend.
 	- Vue.js → Fraemwork zum Erstellen von Dynamische Userinterfaces.
 	- (Optional) Pinia → Statemanagement für Vue,js.
-	- Tailwindcss → Besseres CSS Design mit TypeScript.
+	- Tailwindcss → Besseres CSS Design mit TypeScript. -> Geht nicht.
 
 - Backend:
 	- Express.js → Verwalten von Anfragen als API.

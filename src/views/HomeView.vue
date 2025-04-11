@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  Work in progress!<br/>
+  <progress></progress>
+  <!-- Begrüßung -->
+  <!-- Kleine Bio -->
+  <!-- Profilicon(s) an der rechten Seite -->
 </template>
