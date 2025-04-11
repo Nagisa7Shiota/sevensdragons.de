@@ -6,6 +6,7 @@ import '../assets/comnav.css';
 <template>
   <nav>
     <RouterLink class="nav-component" to="/" exact-active-class="is-active">Home</RouterLink>
-    <RouterLink class="nav-component" to="/about" exact-active-class="is-active">About</RouterLink>
+    <RouterLink class="nav-component" to="/games" exact-active-class="is-active">Games</RouterLink>
+    <RouterLink class="nav-component" to="/socialmedia" exact-active-class="is-active">Social Media</RouterLink>
   </nav>
 </template>

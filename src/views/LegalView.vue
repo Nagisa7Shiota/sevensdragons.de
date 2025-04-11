@@ -1,3 +1,6 @@
 <template>
-  Hi!
+   Work in progress!<br/>
+   <progress></progress>
+   <!-- Impressum -->
+    <!-- Datenschutzerklärung -->
 </template>
