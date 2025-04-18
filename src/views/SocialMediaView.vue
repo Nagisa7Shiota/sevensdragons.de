@@ -1,6 +1,7 @@
 <template>
    Work in progress!<br/>
    <progress></progress>
+   <!-- YouTube Banner -->
    <!-- Social Media Links - Karousel-->
     <!-- YouTube Video - Karosouel -->
      <!-- Amino - Karosouel -->

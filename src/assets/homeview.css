@@ -1,0 +1,16 @@
+.hometext {
+  text-decoration: none;
+  color: #fdfdfd;
+  transition: 0.4s;
+  padding: 3px;
+}
+
+.homecard{
+    background-color: black;
+}
+
+@media (hover: hover) {
+  .hometext:hover {
+    background-color: transparent;
+  }
+}
