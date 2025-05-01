@@ -1,8 +1,19 @@
+.homediv {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
 .hometext {
   text-decoration: none;
   color: #fdfdfd;
   transition: 0.4s;
   padding: 3px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .homecard{
@@ -13,4 +24,16 @@
   .hometext:hover {
     background-color: transparent;
   }
+}
+
+.el-carousel__item h3 {
+  color: #475669;
+  opacity: 0.75;
+  line-height: 150px;
+  margin: 0;
+  text-align: center;
+}
+
+.el-card{
+  margin-top: 5px;
 }
