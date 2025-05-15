@@ -1,5 +1,20 @@
 <script lang="ts">
-  import "../assets/homeview.css"
+  import "../assets/homeview.css";
+  export default {
+      data: function () {
+          return {
+              imagePaths: [] as string[]
+          }
+      },
+      async created() {
+      const pictures = import.meta.glob('@/assets/images/homeview/*.{jpeg,png,gif}');
+
+
+
+      console.log(pictures);
+    }
+  }
+
 </script>
 
 <template>
@@ -18,10 +33,10 @@
     <div>
       <!-- Profilicon(s) an der rechten Seite -->
       <div class="block text-center" m="t-4">
-        <el-carousel trigger="click" height="150px">
-          <el-carousel-item v-for="item in 4" :key="item">
-            <h3 class="small justify-center" text="2xl">{{ item }}</h3>
-          </el-carousel-item>
+        <el-carousel indicator-position="outside" trigger="click" height="150px" width="500px">
+          <el-carousel-item v-for="item in 7" :key="item">
+          <img class="justify-center" style="max-height: 100%; border-radius: 10%;" src="" />
+        </el-carousel-item>
         </el-carousel>
       </div>
       <!-- Profilicon(s) an der rechten Seite -->
