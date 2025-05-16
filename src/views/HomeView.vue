@@ -1,61 +1,68 @@
 <script lang="ts">
-  import "../assets/homeview.css";
-  export default {
-      data: function () {
-          return {
-              imagePaths: [] as string[]
-          }
-      },
-      async created() {
-      const pictures = import.meta.glob('@/assets/images/homeview/*.{jpeg,png,gif}');
+import '../assets/homeview.css'
+import { useHomeViewImageStore } from '../stores/homeviewimage.ts'
 
-
-
-      console.log(pictures);
-    }
-  }
-
+export default {
+  setup() {
+    const store = useHomeViewImageStore()
+    store.getImages()
+    return { store }
+  },
+}
 </script>
 
 <template>
   <div class="homediv">
     <!-- Begrüßung -->
     <a class="hometext">
-      <h1>Drachenstarkes Hallo</h1><br>
-      Und herzlich Willkommen!<br>
-      Dies ist das Reich von SevenSDragons, ein einfacher Typ aus dem Internet.<br><br>
-      Er ist in einigen sozialen Medien oder generell online unterwegs und stellt eigentlich nur verrückte Sachen, jedoch sagen viele, dass er ganz nett ist.
-      Auch ist er in einigen Projekten verwickelt, die vorerst hier nicht gelistet sind.<br><br>
+      <h1>Drachenstarkes Hallo</h1>
+      <br />
+      Und herzlich Willkommen!<br />
+      Dies ist das Reich von SevenSDragons, ein einfacher Typ aus dem Internet.<br /><br />
+      Er ist in einigen sozialen Medien oder generell online unterwegs und stellt eigentlich nur
+      verrückte Sachen, jedoch sagen viele, dass er ganz nett ist. Auch ist er in einigen Projekten
+      verwickelt, die vorerst hier nicht gelistet sind.<br /><br />
 
-      Na ja, willkommen. Nimmt euch eine Tasse Tee und scheut euch um. Vielleicht könnt ihr hier etwas finden.
+      Na ja, willkommen. Nimmt euch eine Tasse Tee und scheut euch um. Vielleicht könnt ihr hier
+      etwas finden.
     </a>
     <!-- Begrüßung -->
     <div>
       <!-- Profilicon(s) an der rechten Seite -->
-      <div class="block text-center" m="t-4">
-        <el-carousel indicator-position="outside" trigger="click" height="150px" width="500px">
-          <el-carousel-item v-for="item in 7" :key="item">
-          <img class="justify-center" style="max-height: 100%; border-radius: 10%;" src="" />
-        </el-carousel-item>
-        </el-carousel>
-      </div>
       <!-- Profilicon(s) an der rechten Seite -->
       <!-- Kleine Bio -->
-        <el-card style="max-width: 480px; background-color: #9E9E9E; color: #980034;">
-          <template #header>
-            <div class="card-header">
-              <span>SevenSDragons</span>
-            </div>
-          </template>
-          <p>Spitznamen: Nagisa, Sev(en), Foxy, Boss etc.</p>
-          <p>Herrkunftsland: Deutschland</p>
-          <p>Körpergröße: 1,82m</p>
-          <p>Lieblingsfarbe: Dunkles Rot</p>
-          <p>Liblingsspiel: Rythm Thief (Königsklasse) & Yu-Gi-Oh! (Top 1)</p>
-          <p>Vorlieben: Essen, Videospiele & Anime</p>
-          <p>Abneigungen: Starke Doppelmoral, Hochmut & Zigaretten</p>
-          <template #footer>Zeit für ein Duel!</template>
-        </el-card>
+      <el-card style="max-width: 480px; background-color: #9e9e9e; color: #980034">
+        <template #header>
+          <div class="card-header">
+            <span>SevenSDragons</span>
+          </div>
+          <div class="block text-center" m="t-4">
+            <el-carousel indicator-position="outside" trigger="click" height="150px" width="500px">
+              <el-carousel-item v-for="image in store.images" :key="image">
+                <img
+                  class="justify-center"
+                  style="max-height: 100%; border-radius: 10%"
+                  :src="image"
+                />
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+        </template>
+        <p>Spitznamen: Nagisa, Sev(en), Foxy, Boss etc.</p>
+        <p>Herrkunftsland: Deutschland</p>
+        <p>Körpergröße: 1,82m</p>
+        <p>Lieblingsfarbe: Dunkles Rot</p>
+        <p>Liblingsspiel: Rythm Thief (Königsklasse) & Yu-Gi-Oh! (Top 1)</p>
+        <p>Vorlieben: Essen, Videospiele & Anime</p>
+        <p>Abneigungen: Starke Doppelmoral, Hochmut & Zigaretten</p>
+        <template #footer>
+          Zeit für ein Duel!<br>
+          Quellen - Credits: <br>
+          <a href="https://fwugbit.itch.io/padoru-maker">Padorou Bild</a><br>
+          <a href="https://aminoapps.com/p/vwt2wk">Rythm Thief Thema</a><br>
+          <a href="https://aminoapps.com/p/m1pilv">Yusei Fudo</a>
+        </template>
+      </el-card>
       <!-- Kleine Bio -->
     </div>
   </div>

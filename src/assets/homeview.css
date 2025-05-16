@@ -33,3 +33,9 @@
 .el-card{
   margin-top: 5px;
 }
+
+.card-header{
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+}
