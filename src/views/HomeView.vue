@@ -23,7 +23,7 @@ export default {
       verrückte Sachen, jedoch sagen viele, dass er ganz nett ist. Auch ist er in einigen Projekten
       verwickelt, die vorerst hier nicht gelistet sind.<br /><br />
 
-      Na ja, willkommen. Nimmt euch eine Tasse Tee und scheut euch um. Vielleicht könnt ihr hier
+      Na ja, willkommen. Nehmt euch eine Tasse Tee und schaut euch um. Vielleicht könnt ihr hier
       etwas finden.
     </a>
     <!-- Begrüßung -->

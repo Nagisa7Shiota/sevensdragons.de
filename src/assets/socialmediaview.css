@@ -1,0 +1,18 @@
+.socialmediabanner{
+    width: -webkit-fill-available;
+}
+
+
+.socialmedialinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.el-carousel__item h3 {
+  color: #475669;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+  text-align: center;
+}
