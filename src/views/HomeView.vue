@@ -12,9 +12,9 @@ export default {
 </script>
 
 <template>
-  <div class="homediv">
+  <div class="homeview_div">
     <!-- Begrüßung -->
-    <a class="hometext">
+    <a class="homeview_text">
       <h1>Drachenstarkes Hallo</h1>
       <br />
       Und herzlich Willkommen!<br />
@@ -28,17 +28,15 @@ export default {
     </a>
     <!-- Begrüßung -->
     <div>
-      <!-- Profilicon(s) an der rechten Seite -->
-      <!-- Profilicon(s) an der rechten Seite -->
       <!-- Kleine Bio -->
-      <el-card style="max-width: 480px; background-color: #9e9e9e; color: #980034">
+      <el-card class="homeview_card" style="">
         <template #header>
-          <div class="card-header">
+          <div class="homeview_cardheader">
             <span>SevenSDragons</span>
           </div>
           <div class="block text-center" m="t-4">
             <el-carousel indicator-position="outside" trigger="click" height="150px" width="500px">
-              <el-carousel-item v-for="image in store.images" :key="image">
+              <el-carousel-item class="homeview_carousel_icon_item" v-for="image in store.images" :key="image">
                 <img
                   class="justify-center"
                   style="max-height: 100%; border-radius: 10%"

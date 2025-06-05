@@ -1,31 +1,47 @@
 <script lang="ts">
 import '../assets/socialmediaview.css'
+import { useSocialMediaViewAreaStore } from '../stores/socialmediaareas.ts';
+
+export default {
+  setup() {
+    const store = useSocialMediaViewAreaStore()
+    store.getAreas()
+    return { store }
+  },
+}
 </script>
 
 <template>
   <!-- YouTube Banner -->
-  <img class="socialmediabanner" src="../assets/images/socialmediaview/channels4_banner.jpg" />
+  <img class="socialmediaview_banner" src="../assets/images/socialmediaview/channels4_banner.jpg" />
   <!-- Social Media Links - Divider-->
-  <div class="socialmedialinks">
+  <div class="socialmediaview_social_links">
     <span>
       <a href="https://aminoapps.com/u/SevenSDragons">Amino</a>
-    </span>
-    <el-divider direction="vertical"> </el-divider>
-    <span>
-      <a href="https://aminoapps.com/c/GenshinImpactComGer">Genshin Impact Amino</a>
-    </span>
-    <el-divider direction="vertical" />
-    <span>
-      <a href="https://discord.com/invite/WH9DAjJamW">Genshin Impact Discord</a>
+      <el-divider direction="vertical" />
+      <a href="https://youtube.com/@SevenSDragons">YouTube</a>
     </span>
   </div>
   <!-- YouTube Video - Karosouel -->
   <div>
     <el-carousel :interval="4000" type="card" height="200px" indicator-position="none">
-      <el-carousel-item v-for="item in 6" :key="item">
+      <el-carousel-item
+        class="socaialmediaview_carousel_youtube_item"
+        v-for="item in 6"
+        :key="item"
+      >
         <h3 text="2xl" justify="center">{{ item }}</h3>
       </el-carousel-item>
     </el-carousel>
   </div>
-  <!-- Amino - Karosouel -->
+  <!-- Amino & Discord - Karosouel -->
+  <div>
+    <el-carousel :interval="4000" type="card" height="200px" indicator-position="none">
+      <el-carousel-item class="socaialmediaview_carousel_amino_item" v-for="area in store.areas" :key="area">
+        <img :alt="area.name" :src="area.img">
+        <h3 text="2xl" justify="center">{{ area.name }}</h3>
+        <a :href="area.link">Tritt bei</a>
+      </el-carousel-item>
+    </el-carousel>
+  </div>
 </template>

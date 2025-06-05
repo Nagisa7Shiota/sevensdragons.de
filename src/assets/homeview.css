@@ -1,40 +1,40 @@
-.homediv {
+.homeview_div {
   display: flex;
   justify-content: space-evenly;
   margin-top: 10px;
 }
 
-.hometext {
+.homeview_text {
   text-decoration: none;
   color: #fdfdfd;
   transition: 0.4s;
   padding: 3px;
   max-width: 500px;
+  width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.homecard{
-    background-color: black;
-}
-
 @media (hover: hover) {
-  .hometext:hover {
+  .homeview_text:hover {
     background-color: transparent;
   }
 }
 
-.el-carousel__item {
+.homeview_carousel_icon_item {
   text-align: center;
 }
 
-.el-card{
+.homeview_card{
   margin-top: 5px;
+  max-width: 480px !important;
+  background-color: #9e9e9e !important;
+  color: #980034 !important;
 }
 
-.card-header{
+.homeview_cardheader{
   display: flex;
   justify-content: center;
   font-size: xx-large;

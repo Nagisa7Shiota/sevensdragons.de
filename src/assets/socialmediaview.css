@@ -1,15 +1,23 @@
-.socialmediabanner{
-    width: -webkit-fill-available;
+.socialmediaview_banner{
+  width: -webkit-fill-available;
 }
 
 
-.socialmedialinks {
+.socialmediaview_social_links {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.el-carousel__item h3 {
+.socaialmediaview_carousel_youtube_item h3 {
+  color: #475669;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+  text-align: center;
+}
+
+.socaialmediaview_carousel_amino_item {
   color: #475669;
   opacity: 0.75;
   line-height: 200px;
